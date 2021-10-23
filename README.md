@@ -1,2 +1,2 @@
-# algorithim_cpp
+# algorithim
 알고리즘 문제풀이
