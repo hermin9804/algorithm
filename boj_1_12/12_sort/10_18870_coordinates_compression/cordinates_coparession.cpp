@@ -22,6 +22,7 @@ int main()
     sort(cv.begin(), cv.end()); 
    
     cv.erase(unique(cv.begin(), cv.end()), cv.end());
+
     for (int i = 0; i < n; i++)
     {
         auto it = lower_bound(cv.begin(), cv.end(), v[i]);
