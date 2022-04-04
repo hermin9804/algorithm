@@ -1,11 +1,19 @@
 #include <stdio.h>
 
+void	swap(int *a, int *b)
+{
+	int tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
 void	quick_sort(int *arr, int start, int end)
 {
 	int	pivot;
 	int	i;
 	int	j;
-	int	tmp;
 
 	pivot = start;
 	i = pivot + 1;
@@ -19,17 +27,9 @@ void	quick_sort(int *arr, int start, int end)
 		while (j > start && arr[j] >= arr[pivot])
 			j--;
 		if (i > j)
-		{
-			tmp = arr[j];
-			arr[j] = arr[pivot];
-			arr[pivot] = tmp;
-		}
+			swap(&arr[j], &arr[pivot]);
 		else
-		{
-			tmp = arr[i];
-			arr[i] = arr[j];
-			arr[j] = tmp;
-		}
+			swap(&arr[i], &arr[j]);
 	}
 	quick_sort(arr, start, j - 1);
 	quick_sort(arr, j + 1, end);
