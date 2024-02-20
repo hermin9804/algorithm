@@ -6,7 +6,8 @@ int dat[mx];
 int pos = 0;
 
 void push(int x){
-	dat[pos++] = x;
+	dat[pos] = x;
+	pos++;
 }
 
 void pop(int x) {
@@ -14,11 +15,10 @@ void pop(int x) {
 }
 
 int top() {
-	return (dat[pos - 1]);
+	return dat[pos - 1];
 }
 
 int main(void) {
 	ios::sync_with_stdio(0);
 	cin.tie(0);
-
 }

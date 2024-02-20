@@ -1,3 +1,4 @@
+// O(log n)
 int	func4(int n)
 {
 	int ret = 1;
@@ -6,3 +7,4 @@ int	func4(int n)
 		ret *= 2;
 	return (ret);
 }
+

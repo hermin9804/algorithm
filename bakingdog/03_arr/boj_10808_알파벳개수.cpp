@@ -1,14 +1,18 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int arr[26] = { 0 };
+int freq[26];
+int main() {
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+	string s;
+	cin >> s;
 
-int	main(){
-	string str;
-	cin >> str;
-	for (int i = 0; i < str.length(); i++)
-		arr[str[i] - 'a']++;
+	for (int i = 0; i < s.length(); i++)
+		freq[s[i] - 'a']++;
+
 	for (int i = 0; i < 26; i++)
-		cout << arr[i] << ' ';
-	return (0);
+		cout << freq[i] << ' ';
+
+	return 0;
 }
